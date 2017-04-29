@@ -1,0 +1,66 @@
+body{
+    padding-top: 30px;
+}
+h1{
+    font-style: italic;
+    text-decoration: underline;
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+container,row{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px;
+}
+
+label{
+    font-style: italic ;
+    text-decoration: blink;
+    font-size: 100%;
+   
+}
+
+table{
+   border-radius: 200%;
+    border-color: blue;
+    font-size: 20px;
+    border: dashed #000000 10px;
+}
+
+td{
+    background-color: #778899;
+    font-style: italic;
+    
+}
+
+th{
+    background-color: #A2BFC1;
+}
+
+button{
+    background-color: lightblue;
+    border-radius: 20%;
+    text-align: right;
+    font-size: 30px;
+}
+
+header{
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+form{
+    font-size: 23px;
+}
+
+thead{
+    border:#6495ED groove medium;
+}
+
+tbody{
+     border:#6495ED groove medium;
+}

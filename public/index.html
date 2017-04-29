@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title> liste des contacts </title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+</head>
+<body>
+	<div class="container" ng-controller="AppCtrl">
+	<script type="text/javascript"></script>
+		<h1> List of subscribers</h1>
+		 <table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Action</th>
+					<th>&nbsp;</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				 <tr>
+					<td><input class="form-control" ng-model="info.name"></td>
+					<td><input class="form-control" ng-model="info.email"></td>
+					<td><button type="button" class="btn btn-primary" ng-click="ajouterInfo()">Ajouter</button> </td>
+					<td><button type="button" class="btn btn-success" ng-click="update()">Update</button> </td>
+				</tr>
+				<tr ng-repeat="info in test">
+					<td>{{info.name}}</td>
+					<td>{{info.email}}</td>
+					<td><button type="button" class="btn btn-danger" ng-click="remove(info._id)">Supprimer</button></td>
+					<td><button type="button" class="btn btn-warning" ng-click="edit(info._id)">modifier</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+			<!-- <script src="lib/angular.min.js"></script> -->
+		<script src="controllers/controller.js"></script>
+
+</body>
+</html>
