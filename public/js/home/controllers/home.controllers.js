@@ -31,7 +31,7 @@
           };
            $scope.onclickSubscriber = function () {
                 $scope.setTab(2)
-                // $state.go('compte');
+                $state.go('subscriber');
           };
     }
 })();
