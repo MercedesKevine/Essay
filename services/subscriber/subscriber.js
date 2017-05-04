@@ -12,7 +12,7 @@ function list (req, res) {
   Subscriber.find(function(err, results) {
       if (err) { console.log(err); }
 
-      res.send({ subscribers: results });
+      res.send(results);
       console.log("list objet ..."+results);
   });
 };
@@ -29,7 +29,7 @@ function create (req, res) {
 
 
 function update (req, res) {
-    var id = req.params.id;
+    var id = req.params._id;
     Subscriber.update({ _id: mongoose.Types.ObjectId(id) }, {
         $set: {firstName: req.body.firstName ,
               lastName:req.body.lastName,
@@ -52,7 +52,7 @@ function update (req, res) {
 };
 
 function del (req, res) {
-      var id = req.params.id;
+      var id = req.params._id;
       Subscriber.remove({ _id: mongoose.Types.ObjectId(id) }, function(err,doc) {
           if (err) { console.log(err); }
           res.send(doc);
@@ -61,7 +61,7 @@ function del (req, res) {
 };
 
 function read (req, res) {
-	var id = req.params.id;
+	var id = req.params._id;
 	console.log("cool a l'interrieur...");
 	Subscriber.findOne({_id:mongoose.Types.ObjectId(id)},
 		function(err, doc){

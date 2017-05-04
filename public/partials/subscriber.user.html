@@ -1,0 +1,16 @@
+<div class="panel-primary" >
+    <div >
+        <ul class="nav nav-tabs nav-pills">
+            <li ng-class="{ active:isSet(1) }">
+                <a href  ng-click="onclickUser()">User</a>
+            </li>
+            <li ng-class="{ active:isSet(2) }">
+                <a href  ng-click="onclickSubscriber()">Subscriber</a>
+            </li>
+        </ul>
+    </div >
+    <div ui-view="moduleContent">
+
+    </div>
+
+</div>

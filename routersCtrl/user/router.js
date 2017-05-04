@@ -3,9 +3,9 @@ var user = require('../../services/user/user');// Second database connexion with
 var router = express.Router();
 
 router.get('/', user.list);
-router.get('/:id', user.read);
+router.get('/:_id', user.read);
 router.post('/', user.create);
-router.put('/:id', user.update);
-router.delete('/:id', user.del);
+router.put('/:_id', user.update);
+router.delete('/:_id', user.del);
 
 module.exports = router;

@@ -13,7 +13,7 @@ function list (req, res) {
   User.find(function(err, results) {
       if (err) { console.log(err); }
 
-      res.send({ users: results });
+      res.send(results);
       console.log("list objet ..."+results);
   });
 };
@@ -30,7 +30,7 @@ function create (req, res) {
 
 
 function update (req, res) {
-    var id = req.params.id;
+    var id = req.params._id;
     User.update({ _id: mongoose.Types.ObjectId(id) }, {
         $set: {firstName: req.body.firstName ,
               lastName:req.body.lastName,
@@ -52,16 +52,18 @@ function update (req, res) {
 };
 
 function del (req, res) {
-      var id = req.params.id;
+      var id = req.params._id;
       User.remove({ _id: mongoose.Types.ObjectId(id) }, function(err,doc) {
-          if (err) { console.log(err); }
+          if (err) { console.log(err);
+            console.log('id cote back'+ id);
+          }
           res.send(doc);
           console.log("not delete objet ..."+doc);
       });
 };
 
 function read (req, res) {
-	var id = req.params.id;
+	var id = req.params._id;
 	console.log("cool a l'interrieur...");
 	User.findOne({_id:mongoose.Types.ObjectId(id)},
 		function(err, doc){

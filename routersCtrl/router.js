@@ -6,7 +6,7 @@ var userRoutes = require('./user/router');
 router.use('/subscribers', subscriberRoutes);
 router.use('/users', userRoutes);
 
-router.get('/', function(req, res) {
+router.get('/home', function(req, res) {
   res.redirect('/subscribers');
 });
 

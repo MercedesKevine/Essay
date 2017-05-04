@@ -3,9 +3,9 @@ var subscriber = require('../../services/subscriber/subscriber');// Second datab
 var router = express.Router();
 
 router.get('/', subscriber.list);
-router.get('/:id', subscriber.read);
+router.get('/:_id', subscriber.read);
 router.post('/', subscriber.create);
-router.put('/:id', subscriber.update);
-router.delete('/:id', subscriber.del);
+router.put('/:_id', subscriber.update);
+router.delete('/:_id', subscriber.del);
 
 module.exports = router;
